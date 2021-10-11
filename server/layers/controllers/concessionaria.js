@@ -23,12 +23,12 @@ class InfosConcessionaria {
 
     create_value(barCode) {
         barCode = barCode.replace(/[^0-9]/g, '');
-        let boletoValue = '',
+        let ticketValue = '',
             finalValue,
             reference = barCode.substr(2, 1);
         if (reference == '6' || reference == '8') {
-            boletoValue = barCode.substr(4, 11);
-            finalValue = boletoValue.substr(0, 9) + '.' + boletoValue.substr(9, 2);
+            ticketValue = barCode.substr(4, 11);
+            finalValue = ticketValue.substr(0, 9) + '.' + ticketValue.substr(9, 2);
             let char = finalValue.substr(1, 1);
             while (char === '0') {
                 // Verificar Função
