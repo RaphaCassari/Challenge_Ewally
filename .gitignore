@@ -1,5 +1,5 @@
 ### Node ###
-# Logs
+# Logs and locks
 logs
 *.log
 npm-debug.log*

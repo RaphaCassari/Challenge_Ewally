@@ -1,7 +1,7 @@
 {
     "name": "server",
     "version": "1.0.0",
-    "description": "API",
+    "description": "Teste Prátivo Back End - Ewally",
     "main": "index.js",
     "scripts": {
         "start": "node index.js",

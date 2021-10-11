@@ -1,7 +1,5 @@
-const getInfosBank = require('./bankLogic'),
-    /* getInfosConcessionaria = require('./concessionaria') */
-    InfosConcessionaria = require('./concessionaria'),
-    InfosBank = require('./bankLogic')
+const InfosBank = require('./bankLogic'),
+    InfosConcessionaria = require('./concessionaria')
 infosConcessionaria = new InfosConcessionaria();
 infosBank = new InfosBank();
 

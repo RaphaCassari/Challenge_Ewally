@@ -1,5 +1,6 @@
 class InfosBank {
 
+    // Retorna objeto com informações sobre o boleto
     get(lineCode) {
         let barCode = this.create_barCode(lineCode)
         let object = {
