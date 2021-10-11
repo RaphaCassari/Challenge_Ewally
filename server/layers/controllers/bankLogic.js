@@ -13,7 +13,7 @@ class InfosBank {
 
     create_barCode(lineCode) {
         let barCode = lineCode.replace(/[^0-9]/g, '');
-        // CÁLCULO DO DÍGITO DE AUTOCONFERÊNCIA (DAC)   -   5ª POSIÇÃO
+        // Cálculo do digito de auto conferência (DAC) - 5ª Posição
         if (barCode.length < 47) barCode = barCode + '00000000000'.substr(0, 47 - barCode.length);
         barCode = barCode.substr(0, 4) +
             barCode.substr(32, 15) +
@@ -31,13 +31,16 @@ class InfosBank {
                 days = barCode.substr(5, 4);
             date = new Date();
             currentDate = new Date();
-            currentDate.setFullYear(1997, 9, 7);
+            currentDate.setFullYear(1997, 9, 7); // Data base para o calculo
+
             date.setTime(currentDate.getTime() + (1000 * 60 * 60 * 24 * days));
             month = (currentDate.getMonth() + 1);
+
             if (month < 10) month = "0" + month;
             let day = (currentDate.getDate() + 1);
             if (day < 10) day = "0" + day;
             let dateFormat = (date.getFullYear() + "-" + ((date.getMonth() + 1)) + "-" + (date.getDate()));
+
             return (dateFormat)
         }
     }

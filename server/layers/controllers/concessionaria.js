@@ -5,7 +5,6 @@ class InfosConcessionaria {
         let object = {
             barCode: barCode,
             amount: this.create_value(barCode),
-            //expirationDate: fator_vencimento(barCode)
         }
         return object
     }
@@ -30,31 +29,15 @@ class InfosConcessionaria {
             ticketValue = barCode.substr(4, 11);
             finalValue = ticketValue.substr(0, 9) + '.' + ticketValue.substr(9, 2);
             let char = finalValue.substr(1, 1);
+            // Isolar Valor do Boleto
             while (char === '0') {
-                // Verificar Função
-                finalValue = this.substringReplace(finalValue, '', 0, 1);
+                finalValue = finalValue.slice(1)
                 char = finalValue.substr(1, 1);
             }
         } else {
             finalValue = 0;
         }
         return finalValue * 100;
-    }
-
-    substringReplace(str, repl, inicio, tamanho) {
-        if (inicio < 0) {
-            inicio = inicio + str.length;
-        }
-        tamanho = tamanho !== undefined ? tamanho : str.length;
-        if (tamanho < 0) {
-            tamanho = tamanho + str.length - inicio;
-        }
-        return [
-            str.slice(0, inicio),
-            repl.substr(0, tamanho),
-            repl.slice(tamanho),
-            str.slice(inicio + tamanho)
-        ].join('');
     }
 }
 
