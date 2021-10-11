@@ -2,9 +2,13 @@
 ## <a href="https://github.com/RaphaCassari/Challenge_Ewally/blob/master/challenge_ewally.pdf">Descrição do projeto</a>
 
 
-# Tests
-## yarn Jest
+# To run Tests
+```
+$ yarn Jest
+```
 
-# Run 
-## yarn start
-
+# To Run Project
+```
+$ yarn
+$ yarn start
+```
