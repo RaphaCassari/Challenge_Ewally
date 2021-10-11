@@ -1,4 +1,4 @@
-class InfosBank {
+class Bank {
 
     // Retorna objeto com informações sobre o boleto
     get(lineCode) {
@@ -50,4 +50,4 @@ class InfosBank {
     }
 }
 
-module.exports = InfosBank
+module.exports = Bank

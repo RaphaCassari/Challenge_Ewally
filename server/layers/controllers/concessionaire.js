@@ -1,4 +1,4 @@
-class InfosConcessionaria {
+class Concessionaire {
 
     get(lineCode) {
         let barCode = this.create_barCode(lineCode)
@@ -41,4 +41,4 @@ class InfosConcessionaria {
     }
 }
 
-module.exports = InfosConcessionaria
+module.exports = Concessionaire

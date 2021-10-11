@@ -1,16 +1,16 @@
-const InfosBank = require('./bankLogic'),
-    InfosConcessionaria = require('./concessionaria');
+const Bank = require('./bank'),
+    Concessionaire = require('./concessionaire');
 
-infosConcessionaria = new InfosConcessionaria();
-infosBank = new InfosBank();
+concessionaire = new Concessionaire();
+bank = new Bank();
 
 function getInfos(req, res) {
     const codigo = req.params.id;
     if (res.locals.type == 'CONCESSIONARIA') {
-        const result = infosConcessionaria.get(codigo);
+        const result = concessionaire.get(codigo);
         res.status(200).send(result);
     } else {
-        const result = infosBank.get(codigo);
+        const result = bank.get(codigo);
         res.status(200).send(result);
     }
 }
