@@ -3,6 +3,7 @@
 
 # To Run Project
 ```
+$ cd server
 $ yarn
 $ yarn start
 ```
